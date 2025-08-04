@@ -8,49 +8,36 @@
     <meta name="description" content="Portfolio Mohammad Rizki Prambudi" />
     <title>Mohammad Rizki Prambudi</title>
 
-    <!-- Tailwind CSS and Daisy UI CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
       type="text/css"
     />
 
-    <!-- Add Inter font from Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
     />
-    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!-- Lightbox for project images -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
     />
-    <style>
-      body {
-        font-family: "Inter", sans-serif;
-      }
-      .tag li {
-        @apply badge badge-lg badge-accent text-accent-content mr-2 mb-2;
-      }
-      .nav-link.active {
-        @apply text-primary font-bold;
-      }
-    </style>
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
 
   <body>
-    <!-- ======================= -->
-    <!--     Navbar Section      -->
-    <!-- ======================= -->
     <nav class="navbar bg-base-100 shadow-xl fixed top-0 w-full z-50">
       <div class="navbar-start">
-        <!-- Mobile Dropdown Menu -->
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
             <svg
@@ -79,13 +66,11 @@
             <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </div>
-        <!-- Responsive Name Display -->
-        <a class="btn btn-ghost text-lg lg:text-xl">
+        <a class="btn btn-ghost text-lg lg:text-xl animate-bounce-in">
           <span class="lg:hidden">Moriz Prambudi</span>
           <span class="hidden lg:inline">Mohammad Rizki Prambudi</span>
         </a>
       </div>
-      <!-- Desktop Navigation Links -->
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1">
           <li><a href="#home" class="nav-link active">Home</a></li>
@@ -96,45 +81,44 @@
         </ul>
       </div>
       <div class="navbar-end">
-        <!-- The href for the resume button is a placeholder -->
-        <a class="btn btn-sm btn-primary" href="#" target="_blank">Resume</a>
+        <a
+          class="btn btn-sm btn-primary animate-pop-in"
+          href="assets/cv/Mohammad Rizki Prambudi-CV.pdf"
+          target="_blank"
+          >Resume</a
+        >
       </div>
     </nav>
 
-    <!-- ======================= -->
-    <!--      Hero Section       -->
-    <!-- ======================= -->
     <div id="home" class="hero min-h-screen bg-base-200 pt-20">
       <div class="hero-content flex-col lg:flex-row-reverse">
         <img
-          src="img/foto.jpg"
-          class="max-w-sm rounded-full shadow-2xl"
+          src="assets/img/foto.jpg"
+          class="max-w-sm rounded-full shadow-2xl fade-in-up"
           alt="Mohammad Rizki Prambudi"
         />
-        <div>
+        <div class="fade-in-up">
           <h5 class="text-2xl font-light">Halo I'am,</h5>
-          <!-- Responsive Name Display in Hero Section -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold">
-            <span class="lg:hidden">Moriz Prambudi</span>
-            <span class="hidden lg:inline">Mohammad Rizki Prambudi</span>
+          <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">
+            <span id="typed-name"></span>
           </h1>
           <p class="py-6">
             I am creating website pages with HTML, CSS, JS, PHP, or frameworks.
           </p>
-          <!-- The href for the download CV button is a placeholder -->
-          <a href="#" class="btn btn-primary btn-user" target="_blank">
+          <a
+            href="assets/cv/Mohammad Rizki Prambudi-CV.pdf"
+            class="btn btn-primary btn-user animate-pop-in"
+            target="_blank"
+          >
             <i class="fas fa-download mr-2"></i> Download CV
           </a>
         </div>
       </div>
     </div>
 
-    <!-- ======================= -->
-    <!--    About Me Section     -->
-    <!-- ======================= -->
     <div id="aboutme" class="py-16 bg-base-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12">
+        <div class="label-menu mb-12 fade-in-up">
           <h2 class="text-4xl font-extrabold mb-2">About Me</h2>
           <p
             class="text-sm font-semibold uppercase tracking-wider text-primary"
@@ -142,7 +126,7 @@
             Get to Know Me
           </p>
         </div>
-        <div class="card bg-base-200 shadow-xl max-w-4xl mx-auto">
+        <div class="card bg-base-200 shadow-xl max-w-4xl mx-auto fade-in-up">
           <div class="card-body">
             <p class="text-lg leading-relaxed text-justify">
               Saya Mohammad Rizki Prambudi, seorang individu yang memiliki
@@ -167,12 +151,9 @@
       </div>
     </div>
 
-    <!-- ======================= -->
-    <!--     Skills Section      -->
-    <!-- ======================= -->
     <div id="skills" class="py-16 bg-base-200">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12">
+        <div class="label-menu mb-12 fade-in-up">
           <h2 class="text-4xl font-extrabold mb-2">Skills</h2>
           <p
             class="text-sm font-semibold uppercase tracking-wider text-primary"
@@ -181,115 +162,107 @@
           </p>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          <!-- Skill Card 1 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
-              <img src="img/html.png" alt="HTML" class="h-16 w-16" />
+              <img src="assets/img/html.png" alt="HTML" class="h-16 w-16" />
               <h5 class="mt-4 text-xl font-bold">HTML</h5>
             </div>
           </div>
-          <!-- Skill Card 2 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
-              <img src="img/css.png" alt="CSS" class="h-16 w-16" />
+              <img src="assets/img/css.png" alt="CSS" class="h-16 w-16" />
               <h5 class="mt-4 text-xl font-bold">CSS</h5>
             </div>
           </div>
-          <!-- Skill Card 3 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
-              <img src="img/php.png" alt="PHP" class="h-16 w-16" />
+              <img src="assets/img/php.png" alt="PHP" class="h-16 w-16" />
               <h5 class="mt-4 text-xl font-bold">PHP</h5>
             </div>
           </div>
-          <!-- Skill Card 4 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
-              <img src="img/bootstrap.png" alt="Bootstrap" class="h-16 w-16" />
+              <img
+                src="assets/img/bootstrap.png"
+                alt="Bootstrap"
+                class="h-16 w-16"
+              />
               <h5 class="mt-4 text-xl font-bold">Bootstrap</h5>
             </div>
           </div>
-          <!-- Skill Card 5 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
               <img
-                src="img/codeigniter.png"
+                src="assets/img/codeigniter.png"
                 alt="CodeIgniter"
                 class="h-16 w-16"
               />
               <h5 class="mt-4 text-xl font-bold">CodeIgniter</h5>
             </div>
           </div>
-          <!-- Skill Card 6 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
-              <img src="img/laravel.png" alt="Laravel" class="h-16 w-16" />
+              <img
+                src="assets/img/laravel.png"
+                alt="Laravel"
+                class="h-16 w-16"
+              />
               <h5 class="mt-4 text-xl font-bold">Laravel</h5>
             </div>
           </div>
-          <!-- Skill Card 7 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
-              <img src="img/jquery.png" alt="jQuery" class="h-16 w-16" />
+              <img src="assets/img/jquery.png" alt="jQuery" class="h-16 w-16" />
               <h5 class="mt-4 text-xl font-bold">jQuery</h5>
             </div>
           </div>
-          <!-- Skill Card 8 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
               <img
-                src="img/phpmyadmin.png"
+                src="assets/img/phpmyadmin.png"
                 alt="phpMyAdmin"
                 class="h-16 w-16"
               />
               <h5 class="mt-4 text-xl font-bold">phpMyAdmin</h5>
             </div>
           </div>
-          <!-- Skill Card 9 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
               <img
-                src="img/restful-api.png"
+                src="assets/img/restful-api.png"
                 alt="RESTful API"
                 class="h-16 w-16"
               />
               <h5 class="mt-4 text-xl font-bold">RESTful API</h5>
             </div>
           </div>
-          <!-- Skill Card 10 -->
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <div class="card-body items-center text-center">
-              <!-- Placeholder image for skill icon -->
-              <img src="img/tailwind.png" alt="RESTful API" class="h-16 w-16" />
+              <img
+                src="assets/img/tailwind.png"
+                alt="RESTful API"
+                class="h-16 w-16"
+              />
               <h5 class="mt-4 text-xl font-bold">Tailwind</h5>
             </div>
           </div>
@@ -297,12 +270,9 @@
       </div>
     </div>
 
-    <!-- ======================= -->
-    <!--    Projects Section     -->
-    <!-- ======================= -->
     <div id="projects" class="py-16 bg-base-100">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12">
+        <div class="label-menu mb-12 fade-in-up">
           <h2 class="text-4xl font-extrabold mb-2">Projects</h2>
           <p
             class="text-sm font-semibold uppercase tracking-wider text-primary"
@@ -311,25 +281,23 @@
           </p>
         </div>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project Card 1 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-1.PNG"
+                href="assets/img/project-1.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem Informasi Buku Tamu"
               >
                 <img
-                  src="img/project-1.PNG"
+                  src="assets/img/project-1.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+1';"
                   class="rounded-lg shadow-inner"
                   alt="project-1"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">
                 Sistem Informasi Buku Tamu
@@ -342,25 +310,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 2 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-2.PNG"
+                href="assets/img/project-2.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem Informasi Koperasi"
               >
                 <img
-                  src="img/project-2.PNG"
+                  src="assets/img/project-2.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+2';"
                   class="rounded-lg shadow-inner"
                   alt="project-2"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">
                 Sistem Informasi Koperasi
@@ -373,25 +339,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 3 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-3.PNG"
+                href="assets/img/project-3.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem Informasi E-Arsip"
               >
                 <img
-                  src="img/project-3.PNG"
+                  src="assets/img/project-3.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+3';"
                   class="rounded-lg shadow-inner"
                   alt="project-3"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">Sistem E-Arsip</h5>
               <ul class="tag">
@@ -402,25 +366,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 4 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-4.PNG"
+                href="assets/img/project-4.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem Informasi Organisasi Remaja"
               >
                 <img
-                  src="img/project-4.PNG"
+                  src="assets/img/project-4.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+4';"
                   class="rounded-lg shadow-inner"
                   alt="project-4"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">
                 Sistem Informasi Organisasi Remaja
@@ -433,25 +395,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 5 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-5.PNG"
+                href="assets/img/project-5.PNG"
                 data-lightbox="project-set"
                 data-title="SPK Pemilihan Siswa Berprestasi Metode SAW"
               >
                 <img
-                  src="img/project-5.PNG"
+                  src="assets/img/project-5.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+5';"
                   class="rounded-lg shadow-inner"
                   alt="project-5"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">
                 SPK Pemilihan Siswa Berprestasi Metode SAW
@@ -464,25 +424,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 6 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-6.PNG"
+                href="assets/img/project-6.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem Informasi Permalan Penjualan Metode Trend Moment"
               >
                 <img
-                  src="img/project-6.PNG"
+                  src="assets/img/project-6.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+6';"
                   class="rounded-lg shadow-inner"
                   alt="project-6"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">
                 SI Peramalan Penjualan Metode Trend Moment
@@ -495,25 +453,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 7 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-7.PNG"
+                href="assets/img/project-7.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem Pembuatan Jadwal Pelajaran"
               >
                 <img
-                  src="img/project-7.PNG"
+                  src="assets/img/project-7.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+7';"
                   class="rounded-lg shadow-inner"
                   alt="project-7"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">
                 Sistem Pembuatan jadwal Pelajaran (Smart Jadwal)
@@ -526,25 +482,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 8 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-8.PNG"
+                href="assets/img/project-8.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem Pembuatan Jadwal Pelajaran"
               >
                 <img
-                  src="img/project-8.PNG"
+                  src="assets/img/project-8.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+8';"
                   class="rounded-lg shadow-inner"
                   alt="project-8"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">Web Sekolah + PPDB</h5>
               <ul class="tag">
@@ -555,25 +509,23 @@
               </ul>
             </div>
           </div>
-          <!-- Project Card 9 -->
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105"
+            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
           >
             <figure class="p-4">
               <a
-                href="img/project-9.PNG"
+                href="assets/img/project-9.PNG"
                 data-lightbox="project-set"
                 data-title="Sistem E-Learning SimakBelajar"
               >
                 <img
-                  src="img/project-9.PNG"
+                  src="assets/img/project-9.PNG"
                   onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+9';"
                   class="rounded-lg shadow-inner"
                   alt="project-9"
                 />
               </a>
             </figure>
-            <!-- Added text-left and px-4 for alignment -->
             <div class="card-body pt-0 px-4 text-left">
               <h5 class="card-title text-lg font-bold">
                 Sistem E-Learning (SimakBelajar)
@@ -590,12 +542,9 @@
       </div>
     </div>
 
-    <!-- ======================= -->
-    <!--    Contact Section      -->
-    <!-- ======================= -->
     <div id="contact" class="bg-base-200 py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12">
+        <div class="label-menu mb-12 fade-in-up">
           <h2 class="text-4xl font-extrabold mb-2">Contact</h2>
           <p
             class="text-sm font-semibold uppercase tracking-wider text-primary"
@@ -603,10 +552,10 @@
             Get In Touch
           </p>
         </div>
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center fade-in-up">
           <div class="avatar online">
             <div class="w-36 rounded-full shadow-lg">
-              <img src="img/foto.jpg" alt="Mohammad Rizki Prambudi" />
+              <img src="assets/img/foto.jpg" alt="Mohammad Rizki Prambudi" />
             </div>
           </div>
           <h1 class="text-3xl font-bold mt-4">
@@ -617,7 +566,7 @@
           <div class="flex space-x-4 mt-6">
             <a
               href="https://wa.me/628883911162"
-              class="hover:opacity-75"
+              class="hover:opacity-75 animate-icon-bounce"
               id="go-wa"
               target="_blank"
             >
@@ -628,7 +577,7 @@
             </a>
             <a
               href="https://www.instagram.com/m.rizkiprambudi"
-              class="hover:opacity-75"
+              class="hover:opacity-75 animate-icon-bounce"
               id="go-ig"
               target="_blank"
             >
@@ -639,7 +588,7 @@
             </a>
             <a
               href="https://github.com/mohammadrizkiprambudi"
-              class="hover:opacity-75"
+              class="hover:opacity-75 animate-icon-bounce"
               id="go-github"
               target="_blank"
             >
@@ -653,35 +602,13 @@
       </div>
     </div>
 
-    <!-- ======================= -->
-    <!--       Footer            -->
-    <!-- ======================= -->
     <div class="footer footer-center p-4 bg-neutral text-neutral-content">
       <p>&copy; <span id="tahun"></span>Moriz Prambudi</p>
     </div>
 
-    <!-- JavaScript (Lightbox and jQuery are kept) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <script>
-      // Set the current year in the footer
-      let date = new Date();
-      let tahun = date.getFullYear();
-      document.getElementById("tahun").innerText = tahun;
-
-      // Lightbox options
-      lightbox.option({
-        resizeDuration: 200,
-        wrapAround: true,
-      });
-
-      // Handle active navigation links
-      $(document).ready(function () {
-        $(".nav-link").click(function () {
-          $(".nav-link").removeClass("active");
-          $(this).addClass("active");
-        });
-      });
-    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>
