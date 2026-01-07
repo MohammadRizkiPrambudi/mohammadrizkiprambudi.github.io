@@ -27,7 +27,40 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- <link rel="stylesheet" href="assets/css/style.css" /> -->
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        max-width: 100%;
+        overflow-x: hidden;
+        position: relative;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #38bdf8, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glow {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(56, 189, 248, 0.15) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        border-radius: 50%;
+        z-index: -1;
+        filter: blur(60px);
+        pointer-events: none;
+        max-width: 100vw;
+      }
+    </style>
   </head>
 
   <body class="bg-base-300 text-base-content antialiased">
@@ -54,7 +87,6 @@
           >MORIZ<span class="text-primary">.</span></a
         >
       </div>
-
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 gap-2 font-medium">
           <li>
@@ -84,17 +116,13 @@
           </li>
         </ul>
       </div>
-
-      <div class="navbar-end pr-2 lg:pr-0">
+      <div class="navbar-end">
         <a
-          class="btn btn-primary btn-sm md:btn-md rounded-full px-6 shadow-lg shadow-primary/20 transition-all hover:scale-105"
+          class="btn btn-primary btn-sm rounded-full px-6"
           href="assets/cv/Mohammad Rizki Prambudi-CV.pdf"
           target="_blank"
+          >Resume</a
         >
-          <span class="hidden md:inline">Resume</span>
-          <i class="fas fa-file-download md:ml-2"></i>
-          <span class="md:hidden">CV</span>
-        </a>
       </div>
     </nav>
 
@@ -102,22 +130,20 @@
       id="home"
       class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden"
     >
-      <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
-        <div class="glow top-20 -left-20"></div>
-        <div
-          class="glow bottom-10 -right-20"
-          style="
-            background: radial-gradient(
-              circle,
-              rgba(129, 140, 248, 0.15) 0%,
-              rgba(0, 0, 0, 0) 70%
-            );
-          "
-        ></div>
-      </div>
+      <div class="glow top-20 -left-20 pointer-events-none"></div>
+      <div
+        class="glow bottom-10 -right-20 pointer-events-none"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(129, 140, 248, 0.15) 0%,
+            rgba(0, 0, 0, 0) 70%
+          );
+        "
+      ></div>
 
       <div
-        class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12 relative"
+        class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12"
       >
         <div
           class="w-full lg:w-1/2 flex justify-center lg:justify-end"
@@ -173,7 +199,7 @@
       </div>
     </section>
 
-    <section id="aboutme" class="py-24 bg-base-200/50 overflow-hidden">
+    <section id="aboutme" class="py-24 bg-base-200/50">
       <div class="container mx-auto px-6 lg:px-12">
         <div class="flex flex-col lg:flex-row gap-16 items-center">
           <div class="w-full lg:w-1/3" data-aos="fade-right">
@@ -185,7 +211,6 @@
               Passionate Educator & Dev
             </p>
           </div>
-
           <div
             class="w-full lg:w-2/3 glass-card p-8 md:p-12 rounded-3xl shadow-xl"
             data-aos="fade-left"
@@ -664,16 +689,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/js/script.js"></script>
-    <script>
-      // Inisialisasi AOS dengan pengaturan anti-overflow
-      AOS.init({
-        duration: 1000,
-        once: true,
-        offset: 120,
-      });
-
-      // Update Tahun Footer
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>

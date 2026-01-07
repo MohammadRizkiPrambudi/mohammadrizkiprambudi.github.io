@@ -1,6 +1,3 @@
-// Initialize AOS
-AOS.init({ duration: 800, once: true });
-
 // Smooth scroll for nav links
 $('a[href^="#"]').on("click", function (event) {
   var target = $(this.getAttribute("href"));
@@ -45,6 +42,3 @@ $(document).ready(function () {
     }
   });
 });
-
-const currentYear = new Date().getFullYear();
-document.getElementById("year").textContent = currentYear;
