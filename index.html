@@ -1,88 +1,121 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="synthwave">
+<html lang="en" data-theme="night" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#5a1188" />
-    <meta name="keyword" content="Web Developer M Rizki Prambudi" />
-    <meta name="description" content="Portfolio Mohammad Rizki Prambudi" />
-    <title>Mohammad Rizki Prambudi</title>
+    <meta
+      name="description"
+      content="Portfolio Mohammad Rizki Prambudi - Web Developer"
+    />
+    <title>Moriz Prambudi | Portofolio</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-      rel="shortcut icon"
-      href="assets/img/favicon.png"
-      type="image/x-icon"
-    />
-    <link
       href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
       rel="stylesheet"
-      type="text/css"
     />
-
     <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
     />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css"
     />
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #38bdf8, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .glow {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(56, 189, 248, 0.15) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        border-radius: 50%;
+        z-index: -1;
+        filter: blur(60px);
+      }
+    </style>
   </head>
 
-  <body>
-    <nav class="navbar bg-base-100 shadow-xl fixed top-0 w-full z-50">
+  <body class="bg-base-300 text-base-content antialiased">
+    <nav
+      class="navbar fixed top-0 z-50 bg-base-300/80 backdrop-blur-lg border-b border-white/5 px-4 lg:px-12"
+    >
       <div class="navbar-start">
         <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <i class="fas fa-bars text-xl"></i>
+          </label>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow-2xl bg-base-200 rounded-2xl w-64 border border-white/10"
           >
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#aboutme" class="nav-link">About Me</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
-        <a class="btn btn-ghost text-lg lg:text-xl animate-bounce-in">
-          <span class="lg:hidden">Moriz Prambudi</span>
-          <span class="hidden lg:inline">Mohammad Rizki Prambudi</span>
-        </a>
+        <a class="text-xl font-extrabold tracking-tighter"
+          >MORIZ<span class="text-primary">.</span></a
+        >
       </div>
       <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
-          <li><a href="#home" class="nav-link active">Home</a></li>
-          <li><a href="#aboutme" class="nav-link">About Me</a></li>
-          <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#projects" class="nav-link">Projects</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
+        <ul class="menu menu-horizontal px-1 gap-2 font-medium">
+          <li>
+            <a href="#home" class="hover:text-primary transition-colors"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#aboutme" class="hover:text-primary transition-colors"
+              >About</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="hover:text-primary transition-colors"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a href="#projects" class="hover:text-primary transition-colors"
+              >Work</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="hover:text-primary transition-colors"
+              >Contact</a
+            >
+          </li>
         </ul>
       </div>
       <div class="navbar-end">
         <a
-          class="btn btn-sm btn-primary animate-pop-in"
+          class="btn btn-primary btn-sm rounded-full px-6"
           href="assets/cv/Mohammad Rizki Prambudi-CV.pdf"
           target="_blank"
           >Resume</a
@@ -90,526 +123,611 @@
       </div>
     </nav>
 
-    <div id="home" class="hero min-h-screen bg-base-200 pt-20">
-      <div class="hero-content flex-col lg:flex-row-reverse">
-        <img
-          src="assets/img/foto.jpg"
-          class="max-w-sm rounded-full shadow-2xl fade-in-up"
-          alt="Mohammad Rizki Prambudi"
-        />
-        <div class="fade-in-up">
-          <h5 class="text-2xl font-light">Halo I'am,</h5>
-          <h1 class="text-xl sm:text-2xl md:text-3xl font-bold">
-            <span id="typed-name"></span>
-          </h1>
-          <p class="py-6">
-            I am creating website pages with HTML, CSS, JS, PHP, or frameworks.
-          </p>
-          <a
-            href="assets/cv/Mohammad Rizki Prambudi-CV.pdf"
-            class="btn btn-primary btn-user animate-pop-in"
-            target="_blank"
+    <section
+      id="home"
+      class="relative min-h-screen flex items-center pt-20 overflow-hidden"
+    >
+      <div class="glow top-20 -left-20"></div>
+      <div
+        class="glow bottom-10 -right-20"
+        style="
+          background: radial-gradient(
+            circle,
+            rgba(129, 140, 248, 0.15) 0%,
+            rgba(0, 0, 0, 0) 70%
+          );
+        "
+      ></div>
+
+      <div
+        class="container mx-auto px-6 lg:px-12 flex flex-col lg:flex-row-reverse items-center gap-12"
+      >
+        <div
+          class="w-full lg:w-1/2 flex justify-center lg:justify-end"
+          data-aos="zoom-in"
+        >
+          <div class="relative group">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"
+            ></div>
+            <img
+              src="assets/img/foto.jpg"
+              class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-base-300 shadow-2xl"
+              alt="Mohammad Rizki Prambudi"
+            />
+          </div>
+        </div>
+        <div
+          class="w-full lg:w-1/2 text-center lg:text-left"
+          data-aos="fade-up"
+        >
+          <div
+            class="badge badge-outline badge-primary mb-6 py-4 px-6 text-sm font-semibold tracking-wide"
           >
-            <i class="fas fa-download mr-2"></i> Download CV
-          </a>
+            AVAILABLE FOR PROJECTS
+          </div>
+          <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
+            Building Digital <br />
+            <span class="gradient-text">Experiences.</span>
+          </h1>
+          <p class="text-lg text-base-content/70 mb-8 max-w-lg mx-auto lg:mx-0">
+            Halo, saya Rizki. Seorang Fullstack Web Developer & Pendidik IT yang
+            fokus pada pembuatan aplikasi web modern yang fungsional dan
+            estetik.
+          </p>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+            <a
+              href="#projects"
+              class="btn btn-primary rounded-xl px-8 shadow-lg shadow-primary/20"
+              >Explore Work</a
+            >
+            <a
+              href="#contact"
+              class="btn btn-ghost border-white/10 rounded-xl px-8"
+              >Let's Talk</a
+            >
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="aboutme" class="py-16 bg-base-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12 fade-in-up">
-          <h2 class="text-4xl font-extrabold mb-2">About Me</h2>
-          <p
-            class="text-sm font-semibold uppercase tracking-wider text-primary"
+    <section id="aboutme" class="py-24 bg-base-200/50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex flex-col lg:flex-row gap-16 items-center">
+          <div class="w-full lg:w-1/3" data-aos="fade-right">
+            <h2 class="text-4xl font-extrabold mb-4">About Me</h2>
+            <div class="h-1.5 w-20 bg-primary rounded-full mb-6"></div>
+            <p
+              class="text-base-content/60 uppercase tracking-widest font-bold text-sm"
+            >
+              Passionate Educator & Dev
+            </p>
+          </div>
+          <div
+            class="w-full lg:w-2/3 glass-card p-8 md:p-12 rounded-3xl shadow-xl"
+            data-aos="fade-left"
           >
-            Get to Know Me
-          </p>
-        </div>
-        <div class="card bg-base-200 shadow-xl max-w-4xl mx-auto fade-in-up">
-          <div class="card-body">
-            <p class="text-lg leading-relaxed text-justify">
-              Saya Mohammad Rizki Prambudi, seorang individu yang memiliki
-              ketertarikan besar di bidang Web Development dan dunia pendidikan,
-              khususnya sebagai Guru Informatika, Teknik Komputer dan Jaringan,
-              serta Rekayasa Perangkat Lunak (RPL). Dengan pengalaman dalam
-              mengembangkan solusi berbasis teknologi, saya memiliki keahlian
-              untuk mewujudkan ide-ide menjadi aplikasi web yang fungsional dan
-              berdampak. <br />
-              Selain passion dalam pengembangan, saya juga memiliki semangat
-              tinggi untuk berbagi pengetahuan kepada orang lain. Saya melihat
-              peran sebagai pendidik bukan hanya mentransfer ilmu, tetapi juga
-              menginspirasi dan membimbing generasi muda agar siap menghadapi
-              tantangan di era digital. Saya adalah pembelajar yang adaptif dan
-              selalu mencari peluang untuk mengasah keterampilan baru. <br />
-              Dengan semangat belajar yang tinggi, saya yakin dapat memberikan
-              kontribusi signifikan, baik dalam menciptakan inovasi di dunia
-              profesional maupun dalam membentuk calon-calon talenta digital di
-              sektor pendidikan.
+            <p class="text-lg leading-relaxed mb-6">
+              Saya Mohammad Rizki Prambudi, seorang Web Developer yang memiliki
+              ketertarikan besar di dunia pendidikan. Saya percaya teknologi
+              adalah jembatan untuk masa depan yang lebih baik.
+            </p>
+            <p class="text-lg leading-relaxed text-base-content/70">
+              Dengan pengalaman dalam Laravel, CodeIgniter, dan ekosistem JS
+              modern, saya membantu klien membangun solusi digital yang scalable
+              sekaligus menginspirasi talenta muda di sektor pendidikan
+              Informatika.
             </p>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="skills" class="py-16 bg-base-200">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12 fade-in-up">
-          <h2 class="text-4xl font-extrabold mb-2">Skills</h2>
-          <p
-            class="text-sm font-semibold uppercase tracking-wider text-primary"
-          >
-            My Expertise
-          </p>
-        </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <section id="skills" class="py-24">
+      <div class="container mx-auto px-6 lg:px-12 text-center">
+        <h2 class="text-4xl font-extrabold mb-4" data-aos="fade-up">
+          Technical Stack
+        </h2>
+        <p class="text-base-content/60 mb-16" data-aos="fade-up">
+          Teknologi yang saya gunakan untuk membangun solusi digital.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="100"
           >
-            <div class="card-body items-center text-center">
-              <img src="assets/img/html.png" alt="HTML" class="h-16 w-16" />
-              <h5 class="mt-4 text-xl font-bold">HTML</h5>
-            </div>
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+              class="mx-auto h-12 w-12 mb-4 group-hover:rotate-[30deg] transition-transform duration-500"
+              alt="React JS"
+            />
+            <h3 class="font-bold">React JS</h3>
           </div>
+
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="200"
           >
-            <div class="card-body items-center text-center">
-              <img src="assets/img/css.png" alt="CSS" class="h-16 w-16" />
-              <h5 class="mt-4 text-xl font-bold">CSS</h5>
-            </div>
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-original.svg"
+              class="mx-auto h-12 w-12 mb-4 group-hover:scale-110 transition-transform"
+              alt="Laravel"
+            />
+            <h3 class="font-bold">Laravel</h3>
           </div>
+
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="300"
           >
-            <div class="card-body items-center text-center">
-              <img src="assets/img/php.png" alt="PHP" class="h-16 w-16" />
-              <h5 class="mt-4 text-xl font-bold">PHP</h5>
-            </div>
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+              class="mx-auto h-12 w-12 mb-4 group-hover:scale-110 transition-transform"
+              alt="JavaScript"
+            />
+            <h3 class="font-bold">JavaScript</h3>
           </div>
+
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="400"
           >
-            <div class="card-body items-center text-center">
-              <img
-                src="assets/img/bootstrap.png"
-                alt="Bootstrap"
-                class="h-16 w-16"
-              />
-              <h5 class="mt-4 text-xl font-bold">Bootstrap</h5>
-            </div>
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-original.svg"
+              class="mx-auto h-12 w-12 mb-4 group-hover:scale-110 transition-transform"
+              alt="Tailwind"
+            />
+            <h3 class="font-bold">Tailwind</h3>
           </div>
+
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="500"
           >
-            <div class="card-body items-center text-center">
-              <img
-                src="assets/img/codeigniter.png"
-                alt="CodeIgniter"
-                class="h-16 w-16"
-              />
-              <h5 class="mt-4 text-xl font-bold">CodeIgniter</h5>
-            </div>
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+              class="mx-auto h-12 w-12 mb-4 group-hover:scale-110 transition-transform"
+              alt="MySQL"
+            />
+            <h3 class="font-bold">MySQL</h3>
           </div>
+
           <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card p-8 rounded-2xl hover:border-primary/50 transition-all group"
+            data-aos="zoom-in"
+            data-aos-delay="600"
           >
-            <div class="card-body items-center text-center">
-              <img
-                src="assets/img/laravel.png"
-                alt="Laravel"
-                class="h-16 w-16"
-              />
-              <h5 class="mt-4 text-xl font-bold">Laravel</h5>
-            </div>
-          </div>
-          <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <div class="card-body items-center text-center">
-              <img src="assets/img/jquery.png" alt="jQuery" class="h-16 w-16" />
-              <h5 class="mt-4 text-xl font-bold">jQuery</h5>
-            </div>
-          </div>
-          <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <div class="card-body items-center text-center">
-              <img
-                src="assets/img/phpmyadmin.png"
-                alt="phpMyAdmin"
-                class="h-16 w-16"
-              />
-              <h5 class="mt-4 text-xl font-bold">phpMyAdmin</h5>
-            </div>
-          </div>
-          <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <div class="card-body items-center text-center">
-              <img
-                src="assets/img/restful-api.png"
-                alt="RESTful API"
-                class="h-16 w-16"
-              />
-              <h5 class="mt-4 text-xl font-bold">RESTful API</h5>
-            </div>
-          </div>
-          <div
-            class="card bg-base-100 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <div class="card-body items-center text-center">
-              <img
-                src="assets/img/tailwind.png"
-                alt="RESTful API"
-                class="h-16 w-16"
-              />
-              <h5 class="mt-4 text-xl font-bold">Tailwind</h5>
-            </div>
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+              class="mx-auto h-12 w-12 mb-4 group-hover:scale-110 transition-transform"
+              alt="PHP"
+            />
+            <h3 class="font-bold">PHP</h3>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="projects" class="py-16 bg-base-100">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12 fade-in-up">
-          <h2 class="text-4xl font-extrabold mb-2">Projects</h2>
-          <p
-            class="text-sm font-semibold uppercase tracking-wider text-primary"
+    <section id="projects" class="py-24 bg-base-200/50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4"
+        >
+          <div>
+            <h2 class="text-4xl font-extrabold mb-2 uppercase">
+              Selected Works
+            </h2>
+            <div class="h-1.5 w-20 bg-primary rounded-full mb-4"></div>
+            <p class="text-base-content/60 italic">
+              Kumpulan sistem informasi yang telah saya kembangkan.
+            </p>
+          </div>
+          <button
+            id="btn-view-all"
+            class="btn btn-outline border-white/20 hover:border-primary rounded-xl group"
           >
-            My Work
-          </p>
+            View All Projects
+            <i
+              class="fas fa-chevron-down ml-2 group-hover:translate-y-1 transition-transform"
+            ></i>
+          </button>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div
+          id="project-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl transition-all border border-white/5"
+            data-aos="fade-up"
           >
-            <figure class="p-4">
-              <a
-                href="assets/img/project-1.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem Informasi Buku Tamu"
-              >
-                <img
-                  src="assets/img/project-1.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+1';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-1"
-                />
-              </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">
-                Sistem Informasi Buku Tamu
-              </h5>
-              <ul class="tag">
-                <li>#PHP NATIVE</li>
-                <li>#JQUERY</li>
-                <li>#BOOTSTRAP</li>
-                <li>#MYSQL</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <figure class="p-4">
-              <a
-                href="assets/img/project-2.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem Informasi Koperasi"
-              >
-                <img
-                  src="assets/img/project-2.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+2';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-2"
-                />
-              </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">
-                Sistem Informasi Koperasi
-              </h5>
-              <ul class="tag">
-                <li>#CI 3</li>
-                <li>#MYSQL</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <figure class="p-4">
-              <a
-                href="assets/img/project-3.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem Informasi E-Arsip"
-              >
-                <img
-                  src="assets/img/project-3.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+3';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-3"
-                />
-              </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">Sistem E-Arsip</h5>
-              <ul class="tag">
-                <li>#CI 4</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-                <li>#MYSQL</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <figure class="p-4">
-              <a
-                href="assets/img/project-4.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem Informasi Organisasi Remaja"
-              >
-                <img
-                  src="assets/img/project-4.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+4';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-4"
-                />
-              </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">
-                Sistem Informasi Organisasi Remaja
-              </h5>
-              <ul class="tag">
-                <li>#CI 4</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-                <li>#MYSQL</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <figure class="p-4">
-              <a
-                href="assets/img/project-5.PNG"
-                data-lightbox="project-set"
-                data-title="SPK Pemilihan Siswa Berprestasi Metode SAW"
-              >
-                <img
-                  src="assets/img/project-5.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+5';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-5"
-                />
-              </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">
-                SPK Pemilihan Siswa Berprestasi Metode SAW
-              </h5>
-              <ul class="tag">
-                <li>#CI 4</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-                <li>#MYSQL</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <figure class="p-4">
-              <a
-                href="assets/img/project-6.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem Informasi Permalan Penjualan Metode Trend Moment"
-              >
-                <img
-                  src="assets/img/project-6.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+6';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-6"
-                />
-              </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">
-                SI Peramalan Penjualan Metode Trend Moment
-              </h5>
-              <ul class="tag">
-                <li>#CI 4</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-                <li>#MYSQL</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <figure class="p-4">
+            <div class="relative overflow-hidden h-48">
               <a
                 href="assets/img/project-7.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem Pembuatan Jadwal Pelajaran"
+                data-lightbox="projects"
+                data-title="Smart Jadwal Pelajaran"
               >
                 <img
                   src="assets/img/project-7.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+7';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-7"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Project"
                 />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-base-300 to-transparent opacity-60"
+                ></div>
               </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">
-                Sistem Pembuatan jadwal Pelajaran (Smart Jadwal)
-              </h5>
-              <ul class="tag">
-                <li>#Laravel 10</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-                <li>#MYSQL</li>
-              </ul>
+            </div>
+            <div class="p-8">
+              <div class="flex gap-2 mb-4">
+                <span class="badge badge-primary badge-sm">Laravel 10</span>
+              </div>
+              <h3 class="text-xl font-extrabold mb-2 uppercase">
+                Smart Jadwal Pelajaran
+              </h3>
+              <p class="text-sm text-base-content/60 mb-6">
+                Sistem otomatisasi pembuatan jadwal pelajaran sekolah berbasis
+                web.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="assets/img/project-7.PNG"
+                  data-lightbox="projects"
+                  class="btn btn-circle btn-ghost btn-sm border border-white/10"
+                  ><i class="fas fa-expand"></i
+                ></a>
+                <a href="#" class="btn btn-primary btn-sm rounded-lg"
+                  >Details</a
+                >
+              </div>
             </div>
           </div>
+
           <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
+            class="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl transition-all border border-white/5"
+            data-aos="fade-up"
+            data-aos-delay="100"
           >
-            <figure class="p-4">
-              <a
-                href="assets/img/project-8.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem Pembuatan Jadwal Pelajaran"
-              >
-                <img
-                  src="assets/img/project-8.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+8';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-8"
-                />
-              </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">Web Sekolah + PPDB</h5>
-              <ul class="tag">
-                <li>#Laravel 9</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-                <li>#MYSQL</li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="card bg-base-200 shadow-xl transition-transform transform hover:scale-105 fade-in-up"
-          >
-            <figure class="p-4">
+            <div class="relative overflow-hidden h-48">
               <a
                 href="assets/img/project-9.PNG"
-                data-lightbox="project-set"
-                data-title="Sistem E-Learning SimakBelajar"
+                data-lightbox="projects"
+                data-title="Smart Jadwal Pelajaran"
               >
                 <img
                   src="assets/img/project-9.PNG"
-                  onerror="this.onerror=null;this.src='https://placehold.co/600x400/a0aec0/4a5568?text=Project+9';"
-                  class="rounded-lg shadow-inner"
-                  alt="project-9"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Project"
                 />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-base-300 to-transparent opacity-60"
+                ></div>
               </a>
-            </figure>
-            <div class="card-body pt-0 px-4 text-left">
-              <h5 class="card-title text-lg font-bold">
-                Sistem E-Learning (SimakBelajar)
-              </h5>
-              <ul class="tag">
-                <li>#Laravel 9</li>
-                <li>#BOOTSTRAP</li>
-                <li>#JQUERY</li>
-                <li>#MYSQL</li>
-              </ul>
+            </div>
+            <div class="p-8">
+              <div class="flex gap-2 mb-4">
+                <span class="badge badge-primary badge-sm">Laravel 9</span>
+              </div>
+              <h3 class="text-xl font-extrabold mb-2 uppercase">
+                LMS SimakBelajar
+              </h3>
+              <p class="text-sm text-base-content/60 mb-6">
+                Learning Management System untuk interaksi guru dan siswa secara
+                realtime.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="assets/img/project-9.PNG"
+                  data-lightbox="projects"
+                  class="btn btn-circle btn-ghost btn-sm border border-white/10"
+                  ><i class="fas fa-expand"></i
+                ></a>
+                <a href="#" class="btn btn-primary btn-sm rounded-lg"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="glass-card rounded-3xl overflow-hidden group hover:shadow-2xl transition-all border border-white/5"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="relative overflow-hidden h-48">
+              <a
+                href="assets/img/project-5.PNG"
+                data-lightbox="projects"
+                data-title="Smart Jadwal Pelajaran"
+              >
+                <img
+                  src="assets/img/project-5.PNG"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Project"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-base-300 to-transparent opacity-60"
+                ></div>
+              </a>
+            </div>
+            <div class="p-8">
+              <div class="flex gap-2 mb-4">
+                <span class="badge badge-primary badge-sm">CI 4</span>
+              </div>
+              <h3 class="text-xl font-extrabold mb-2 uppercase">
+                SPK Siswa Berprestasi
+              </h3>
+              <p class="text-sm text-base-content/60 mb-6">
+                Sistem Pendukung Keputusan menggunakan metode SAW.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="assets/img/project-5.PNG"
+                  data-lightbox="projects"
+                  class="btn btn-circle btn-ghost btn-sm border border-white/10"
+                  ><i class="fas fa-expand"></i
+                ></a>
+                <a href="#" class="btn btn-primary btn-sm rounded-lg"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="more-project hidden glass-card rounded-3xl overflow-hidden group hover:shadow-2xl transition-all border border-white/5"
+          >
+            <div class="relative overflow-hidden h-48">
+              <a
+                href="assets/img/project-8.PNG"
+                data-lightbox="projects"
+                data-title="Smart Jadwal Pelajaran"
+              >
+                <img
+                  src="assets/img/project-8.PNG"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Project"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-base-300 to-transparent opacity-60"
+                ></div>
+              </a>
+            </div>
+            <div class="p-8">
+              <div class="flex gap-2 mb-4">
+                <span class="badge badge-primary badge-sm">Laravel 10</span>
+              </div>
+              <h3 class="text-xl font-extrabold mb-2 uppercase">
+                Web Sekolah + PPDB
+              </h3>
+              <p class="text-sm text-base-content/60 mb-6">
+                Portal informasi sekolah dan pendaftaran siswa baru.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="assets/img/project-8.PNG"
+                  data-lightbox="projects"
+                  class="btn btn-circle btn-ghost btn-sm border border-white/10"
+                  ><i class="fas fa-expand"></i
+                ></a>
+                <a href="#" class="btn btn-primary btn-sm rounded-lg"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="more-project hidden glass-card rounded-3xl overflow-hidden group hover:shadow-2xl transition-all border border-white/5"
+          >
+            <div class="relative overflow-hidden h-48">
+              <a
+                href="assets/img/project-2.PNG"
+                data-lightbox="projects"
+                data-title="SIMAJAR"
+              >
+                <img
+                  src="assets/img/project-2.PNG"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Project"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-base-300 to-transparent opacity-60"
+                ></div>
+              </a>
+            </div>
+            <div class="p-8">
+              <div class="flex gap-2 mb-4">
+                <span class="badge badge-primary badge-sm">React Js + AI</span>
+              </div>
+              <h3 class="text-xl font-extrabold mb-2 uppercase">SIMAJAR</h3>
+              <p class="text-sm text-base-content/60 mb-6">
+                Website membuat modul ajar menggunakan AI.
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="assets/img/project-2.PNG"
+                  data-lightbox="projects"
+                  class="btn btn-circle btn-ghost btn-sm border border-white/10"
+                  ><i class="fas fa-expand"></i
+                ></a>
+                <a
+                  href="https://simajar.vercel.app/"
+                  class="btn btn-primary btn-sm rounded-lg"
+                  target="_blank"
+                  >Details</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="more-project hidden glass-card rounded-3xl overflow-hidden group hover:shadow-2xl transition-all border border-white/5"
+          >
+            <div class="relative overflow-hidden h-48">
+              <a
+                href="assets/img/project-10.jpeg"
+                data-lightbox="projects"
+                data-title="SIMAJAR"
+              >
+                <img
+                  src="assets/img/project-10.jpeg"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  alt="Project"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-base-300 to-transparent opacity-60"
+                ></div>
+              </a>
+            </div>
+            <div class="p-8">
+              <div class="flex gap-2 mb-4">
+                <span class="badge badge-primary badge-sm"
+                  >Express + React Js</span
+                >
+              </div>
+              <h3 class="text-xl font-extrabold mb-2 uppercase">
+                Quick Sender
+              </h3>
+              <p class="text-sm text-base-content/60 mb-6">
+                Sebuah Platform Untuk Mengirimkan Pesan WA
+              </p>
+              <div class="flex justify-between items-center">
+                <a
+                  href="assets/img/project-2.PNG"
+                  data-lightbox="projects"
+                  class="btn btn-circle btn-ghost btn-sm border border-white/10"
+                  ><i class="fas fa-expand"></i
+                ></a>
+                <a
+                  href="https://simajar.vercel.app/"
+                  class="btn btn-primary btn-sm rounded-lg"
+                  target="_blank"
+                  >Details</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div id="contact" class="bg-base-200 py-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div class="label-menu mb-12 fade-in-up">
-          <h2 class="text-4xl font-extrabold mb-2">Contact</h2>
-          <p
-            class="text-sm font-semibold uppercase tracking-wider text-primary"
-          >
-            Get In Touch
+    <section id="contact" class="py-24 relative overflow-hidden">
+      <div class="container mx-auto px-6 lg:px-12 text-center">
+        <div
+          class="max-w-3xl mx-auto glass-card p-12 rounded-[3rem] border-primary/20 shadow-2xl shadow-primary/10"
+          data-aos="zoom-in"
+        >
+          <h2 class="text-4xl font-extrabold mb-4">Let's work together</h2>
+          <p class="text-base-content/70 mb-10 text-lg">
+            Tertarik untuk berkolaborasi atau memiliki pertanyaan? Hubungi saya
+            melalui media di bawah ini.
           </p>
-        </div>
-        <div class="flex flex-col items-center fade-in-up">
-          <div class="avatar online">
-            <div class="w-36 rounded-full shadow-lg">
-              <img src="assets/img/foto.jpg" alt="Mohammad Rizki Prambudi" />
-            </div>
-          </div>
-          <h1 class="text-3xl font-bold mt-4">
-            <span class="font-extrabold">Mohammad</span> Rizki Prambudi
-          </h1>
-          <p class="text-gray-600">Web Developer</p>
 
-          <div class="flex space-x-4 mt-6">
+          <div class="flex flex-wrap justify-center gap-8">
             <a
               href="https://wa.me/628883911162"
-              class="hover:opacity-75 animate-icon-bounce"
-              id="go-wa"
-              target="_blank"
+              class="flex flex-col items-center group"
             >
-              <img
-                src="https://img.icons8.com/color/48/000000/whatsapp.png"
-                class="w-10 h-10"
-              />
+              <div
+                class="w-16 h-16 rounded-2xl bg-success/10 flex items-center justify-center text-success text-2xl group-hover:bg-success group-hover:text-white transition-all mb-3 shadow-lg"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <span class="font-bold">WhatsApp</span>
             </a>
             <a
               href="https://www.instagram.com/m.rizkiprambudi"
-              class="hover:opacity-75 animate-icon-bounce"
-              id="go-ig"
-              target="_blank"
+              class="flex flex-col items-center group"
             >
-              <img
-                src="https://img.icons8.com/fluent/48/000000/instagram-new.png"
-                class="w-10 h-10"
-              />
+              <div
+                class="w-16 h-16 rounded-2xl bg-secondary/10 flex items-center justify-center text-secondary text-2xl group-hover:bg-secondary group-hover:text-white transition-all mb-3 shadow-lg"
+              >
+                <i class="fab fa-instagram"></i>
+              </div>
+              <span class="font-bold">Instagram</span>
             </a>
             <a
               href="https://github.com/mohammadrizkiprambudi"
-              class="hover:opacity-75 animate-icon-bounce"
-              id="go-github"
-              target="_blank"
+              class="flex flex-col items-center group"
             >
-              <img
-                src="https://img.icons8.com/fluent/48/000000/github.png"
-                class="w-10 h-10"
-              />
+              <div
+                class="w-16 h-16 rounded-2xl bg-base-100 flex items-center justify-center text-white text-2xl group-hover:bg-white group-hover:text-black transition-all mb-3 shadow-lg border border-white/10"
+              >
+                <i class="fab fa-github"></i>
+              </div>
+              <span class="font-bold">GitHub</span>
             </a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="footer footer-center p-4 bg-neutral text-neutral-content">
-      <p>&copy; <span id="tahun"></span>Moriz Prambudi</p>
-    </div>
+    <footer
+      class="footer footer-center p-10 bg-base-300 border-t border-white/5"
+    >
+      <div>
+        <p class="font-bold text-lg">Mohammad Rizki Prambudi</p>
+        <p class="text-base-content/50">
+          Copyright © 2026 - All right reserved
+        </p>
+      </div>
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS
+      AOS.init({ duration: 800, once: true });
+
+      // Smooth scroll for nav links
+      $('a[href^="#"]').on("click", function (event) {
+        var target = $(this.getAttribute("href"));
+        if (target.length) {
+          event.preventDefault();
+          $("html, body")
+            .stop()
+            .animate(
+              {
+                scrollTop: target.offset().top - 80,
+              },
+              1000
+            );
+        }
+      });
+
+      $(document).ready(function () {
+        // Pastikan lightbox dikonfigurasi (opsional)
+        lightbox.option({
+          resizeDuration: 200,
+          wrapAround: true,
+          albumLabel: "Gambar %1 dari %2",
+        });
+
+        $("#btn-view-all").on("click", function () {
+          const isHidden = $(".more-project").hasClass("hidden");
+
+          if (isHidden) {
+            // Tampilkan
+            $(".more-project").removeClass("hidden").hide().fadeIn(600);
+            $(this).html(
+              'Show Less <i class="fas fa-chevron-up ml-2 group-hover:-translate-y-1 transition-transform"></i>'
+            );
+          } else {
+            // Sembunyikan
+            $(".more-project").fadeOut(400, function () {
+              $(this).addClass("hidden");
+            });
+            $(this).html(
+              'View All Projects <i class="fas fa-chevron-down ml-2 group-hover:translate-y-1 transition-transform"></i>'
+            );
+          }
+        });
+      });
+    </script>
   </body>
 </html>
